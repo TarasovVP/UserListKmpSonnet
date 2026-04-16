@@ -1,0 +1,15 @@
+# Project exclude paths
+/.gradle/
+/build/
+/composeApp/build/
+/composeApp/build/classes/kotlin/desktop/main/
+/composeApp/build/classes/kotlin/iosSimulatorArm64/main/klib/
+/composeApp/build/classes/kotlin/wasmJs/main/
+/data/build/
+/data/build/classes/kotlin/desktop/main/
+/data/build/classes/kotlin/iosSimulatorArm64/main/klib/
+/shared/build/
+/shared/build/classes/kotlin/desktop/main/
+/shared/build/classes/kotlin/desktop/test/
+/shared/build/classes/kotlin/iosSimulatorArm64/main/klib/
+/shared/build/classes/kotlin/wasmJs/main/

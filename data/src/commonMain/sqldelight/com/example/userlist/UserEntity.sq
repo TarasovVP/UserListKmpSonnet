@@ -1,0 +1,19 @@
+CREATE TABLE UserEntity (
+    id INTEGER NOT NULL PRIMARY KEY,
+    firstName TEXT NOT NULL,
+    lastName TEXT NOT NULL,
+    email TEXT NOT NULL,
+    phone TEXT NOT NULL,
+    imageUrl TEXT NOT NULL,
+    username TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM UserEntity;
+
+insertOrReplace:
+INSERT OR REPLACE INTO UserEntity(id, firstName, lastName, email, phone, imageUrl, username)
+VALUES(?, ?, ?, ?, ?, ?, ?);
+
+deleteAll:
+DELETE FROM UserEntity;
