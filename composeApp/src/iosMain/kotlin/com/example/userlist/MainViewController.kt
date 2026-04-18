@@ -5,9 +5,14 @@ import com.example.userlist.di.appModule
 import com.example.userlist.di.dataPlatformModule
 import com.example.userlist.di.initKoin
 
+private var koinStarted = false
+
 fun MainViewController() = ComposeUIViewController(
     configure = {
-        initKoin(extraModules = listOf(dataPlatformModule, appModule))
+        if (!koinStarted) {
+            koinStarted = true
+            initKoin(extraModules = listOf(dataPlatformModule, appModule))
+        }
     },
 ) {
     App()

@@ -64,6 +64,7 @@ kotlin {
             implementation(compose.material3)
             implementation(libs.lifecycle.viewmodel.compose)
             implementation(libs.lifecycle.runtime.compose)
+            implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.coil.compose)
@@ -71,6 +72,10 @@ kotlin {
 
         nativeAndJvmMain.dependencies {
             implementation(project(":data"))
+            implementation(libs.coil.network.ktor)
+        }
+
+        wasmJsMain.dependencies {
             implementation(libs.coil.network.ktor)
         }
 
@@ -82,6 +87,7 @@ kotlin {
 
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
+            implementation(libs.kotlinx.coroutines.swing)
         }
     }
 }
